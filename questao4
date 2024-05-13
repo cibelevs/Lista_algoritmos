@@ -1,0 +1,21 @@
+//Faça um programa que leia um valor numérico. O programa deve ser capaz de somar 
+//todos os números anteriores ao valor informado.
+//Ex. valor = 3, deve ser calculado 0+1+2 = 3 Valor = 5, deve ser calculado 0+1+2+3+4 = 10
+
+#include <stdio.h>
+int main ()
+{
+ float num;
+ float soma = 0;
+ int i;
+
+ printf ("Insira um valor: ");
+ scanf("%f", &num);
+ 
+ for (i=0; i<num; i++)
+{
+ soma = soma + i ;
+} 
+ printf ("Resultado: %f", soma);
+ return 0;
+}

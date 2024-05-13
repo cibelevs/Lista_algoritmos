@@ -1,0 +1,29 @@
+//Dizemos que um inteiro positivo n é perfeito se for igual à soma de seus divisores positivos diferentes de n.
+//Exemplo: 6 é perfeito, pois 1+2+3 = 6.
+//Dado um inteiro positivo n, verificar se n é perfeito.
+
+#include <stdio.h>
+int main()
+{
+    float num;
+    float soma = 0;
+
+    printf("Insira um valor: ");
+    scanf("%f", &num);
+    
+    if (num > 0)
+    {
+       for (int i = 0; i < num; i++) 
+       {
+         soma = soma + i;
+       }
+     printf("Resultado: %f\n", soma);
+      if (soma == num)
+        printf("Esse número é perfeito");
+      else 
+        printf("Esse número não é perfeito");
+    }
+    else 
+    printf("Erro, tente novamente com outro valor");
+    return 0;
+}

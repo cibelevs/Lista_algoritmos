@@ -1,0 +1,22 @@
+//Letra b
+//b) S = 1 – 1/3 + 1/5 – 1/7 + .............para os primeiros 20 termos
+
+#include <stdio.h>
+int main() 
+{
+    float soma = 1.0;
+    float termo = 1;
+    int i;
+    int sinal = -1; 
+
+    for (i = 3; termo < 20; i = i + 2) 
+    { 
+        soma = soma + sinal * 1.0 / i; 
+        sinal = -sinal; 
+        termo++;
+    }
+
+    printf("Resultado: %f\n", soma);
+
+    return 0;
+}

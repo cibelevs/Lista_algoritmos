@@ -3,7 +3,8 @@
 //massa final e o tempo calculado em horas, minutos e segundos.
 
 #include <stdio.h>
-int main() {
+int main() 
+{
     float massa, fmassa;
     int s, m, h;
     int i = 0;
@@ -16,14 +17,17 @@ int main() {
     scanf ("%f", &massa);
     printf ("Massa inicial: %f\n", massa);
   
-    while (massa > fmassa) {
+    while (massa > fmassa) 
+   {
         massa = massa / 2 ;
         s = s + 50;
-        if (s >= 60) {
+        if (s >= 60) 
+        {
             m = m + s / 60;
             s = s % 60; 
         }
-        if (m >= 60) {
+        if (m >= 60)
+        {
             h = h + m / 60;
             m = m % 60; 
         }

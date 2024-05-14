@@ -9,7 +9,7 @@ int main()
 {
     int contadorM = 0;
     int i;
-    int nfichas = 2;
+    int nfichas = 50;
     
     char nome[nfichas][100]; 
     char sexo[nfichas]; 

@@ -18,6 +18,7 @@ int main()
          soma = soma + i;
        }
      printf("Resultado: %f\n", soma);
+
       if (soma == num)
         printf("Esse número é perfeito");
       else 

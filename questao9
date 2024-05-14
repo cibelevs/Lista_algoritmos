@@ -1,0 +1,63 @@
+//Escrever um algoritmo para um programa que leia um conjunto de 50 fichas contendo cada uma,
+//o nome, altura e o sexo de uma pessoa. Calcule e imprima :
+//a) A maior e a menor altura da turma 
+//b) A média de altura das mulheres 
+//c) A média de altura da turma
+
+#include <stdio.h>
+int main()
+{
+    int contadorM = 0;
+    int i;
+    int max = 10;
+    
+    char nome[max][100]; 
+    char sexo[max]; 
+    
+    float altura[max]; 
+    float maiorAlt = 0, menorAlt = 1000;
+    float somaM = 0, somaT = 0;
+    
+    for ( i = 0; i < max; i++) 
+    {
+        printf("\nDigite o nome da pessoa %d: ", i + 1);
+        scanf("%s", nome[i]);
+        
+        printf("Digite o sexo (M ou F) da pessoa %d: ", i + 1);
+        scanf(" %c", &sexo[i]);
+        
+        while (sexo[i] != 'M' && sexo[i] != 'F') 
+        {
+            printf("Sexo inválido. Digite M para masculino ou F para feminino: ");
+            scanf(" %c", &sexo[i]);
+        }
+        
+        printf("Digite a altura (em metros) da pessoa %d: ", i + 1);
+        scanf("%f", &altura[i]);
+       
+        if (altura[i] > maiorAlt) 
+        {
+            maiorAlt = altura[i];
+        }
+        if (altura[i] < menorAlt) 
+        {
+            menorAlt = altura[i];
+        }
+        if (sexo[i] == 'F') 
+        {
+            somaM = somaM + altura[i];
+            contadorM++;
+        }
+        somaT = somaT + altura[i];
+    }
+    
+    float mediaT = somaT / i;
+    float mediaM = somaM / contadorM;
+    
+   printf("\nMaior altura da turma: %f ",maiorAlt);
+   printf("\nMenor altura da turma: %f",menorAlt);  
+   printf("\nMedia da altura total da turma: %f", mediaT);
+   printf("\nMedia da altura mulheres da turma: %f", mediaM);
+   
+    return 0;
+}

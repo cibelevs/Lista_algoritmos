@@ -27,31 +27,40 @@ int main()
     }
 
     if (a >= b && a > c && b > c) 
-    {maior = a; medio = b; menor = c;} 
+    {maior = a; medio = b; menor = c;}
+    
     else 
     if (b >= a && b > c && a > c) 
-    { maior = b; medio = a; menor = c;} 
+    {maior = b; medio = a; menor = c;}
+    
     else
     if(c >= a && c > b && a > b) 
-    {maior = c; medio = a; menor = b;} 
+    {maior = c; medio = a; menor = b;}
+    
     else 
     if (c >= b && c < a) 
-    { maior = a; medio = c; menor = b;}
+    {maior = a; medio = c; menor = b;}
+    
     else
     if (b >= a && c > a) 
-    {maior = c; medio = b; menor = a;} 
+    {maior = c; medio = b; menor = a;}
+    
     else 
     if (b >= c && c >= a)
     {maior = b; medio = c; menor = a;}
+    
 
     if (i == 1) 
     printf("%f %f %f\n", menor, medio, maior);
+    
     else 
     if (i == 2) 
     printf("%f %f %f\n", maior, medio, menor);
+    
     else 
     if (i == 3) 
     printf("%f %f %f\n", menor, maior, medio);
+    
     else 
     printf("Valor de i inválido. Tente novamente.\n");
     

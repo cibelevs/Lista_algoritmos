@@ -1,1 +1,17 @@
-a
+
+//Dado um número natural n > 10 , verificar se n é palíndrome.
+//Palíndromos também podem ser identificados em strings.
+
+#include<stdio.h>
+int main()
+{
+
+
+
+
+
+
+
+
+return 0;
+}

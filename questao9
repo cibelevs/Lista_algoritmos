@@ -9,16 +9,16 @@ int main()
 {
     int contadorM = 0;
     int i;
-    int max = 10;
+    int nfichas = 2;
     
-    char nome[max][100]; 
-    char sexo[max]; 
+    char nome[nfichas][100]; 
+    char sexo[nfichas]; 
     
-    float altura[max]; 
+    float altura[nfichas]; 
     float maiorAlt = 0, menorAlt = 1000;
     float somaM = 0, somaT = 0;
     
-    for ( i = 0; i < max; i++) 
+    for ( i = 0; i < nfichas; i++) 
     {
         printf("\nDigite o nome da pessoa %d: ", i + 1);
         scanf("%s", nome[i]);
@@ -52,12 +52,20 @@ int main()
     }
     
     float mediaT = somaT / i;
-    float mediaM = somaM / contadorM;
     
    printf("\nMaior altura da turma: %f ",maiorAlt);
    printf("\nMenor altura da turma: %f",menorAlt);  
    printf("\nMedia da altura total da turma: %f", mediaT);
-   printf("\nMedia da altura mulheres da turma: %f", mediaM);
    
+   if (contadorM > 0)
+    {
+    float mediaM = somaM / contadorM; 
+    printf("\nMedia da altura mulheres da turma: %f", mediaM);
+    }
+   else 
+    {
+    printf("\nMedia de mulheres não foi possivel calcular, essa turma não possui mulheres");
+    }
+  
     return 0;
 }

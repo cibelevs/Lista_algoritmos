@@ -22,6 +22,7 @@ int main()
         if (numero[i] != numero[tam - i - 1]) 
         { 
             palindromo = 0; 
+            break;  // Parte responsável por sair do loop assim que uma diferença é encontrada.
         }
     }
 

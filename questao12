@@ -9,13 +9,13 @@ int main()
     int pA = 90000000;
     int pB = 200000000;
     float taxaA = 0.03;
-    float taxaB = 0.015;
+    float taxaB = 0.15;
     int tempo = 0; 
     
     while (pA <= pB) 
     {
-        pA = pA + pA * taxaA;
-        pB = pB + pB * taxaB;
+        pA =  pA * (1 + taxaA);
+        pB =  pB * (1 + taxaB);
         tempo++;
     }
     

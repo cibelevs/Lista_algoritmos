@@ -58,7 +58,6 @@ int main()
         meio = a;
     else 
     if (b != maior && b != menor)
-        
         meio = b;
     else
         meio = c;

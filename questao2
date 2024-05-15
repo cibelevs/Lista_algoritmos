@@ -5,11 +5,11 @@
 //Se i=3 escrever os 3 valores de forma que o maior valor entre a,b,c fica entre os outros
 
 #include <stdio.h>
-int main()
+int main() 
 {
     int i;
     float a, b, c;
-    float maior, menor, medio;
+    float maior, menor, meio;
 
     printf("Determine o valor de a: ");
     scanf("%f", &a);
@@ -22,39 +22,55 @@ int main()
 
     if (a == b && b == c)
     {
-      printf("Números iguais\n");
-      return 0;
+        printf("Números iguais\n");
+        return 0;
     }
 
-    if (a >= b && a > c && b > c) 
-        maior = a; medio = b; menor = c;
+    if (a >= b && a > c)
+        maior = a, b;
     else 
-    if (b >= a && b > c && a > c) 
-        maior = b; medio = a; menor = c;
+    if (b >= a && b > c)
+        maior = b,a;
     else
-    if(c >= a && c > b && a > b) 
-        maior = c; medio = a; menor = b;
+    if (c >= a && c > b)
+        maior = c , a;
     else 
-    if (c >= b && c < a) 
-        maior = a; medio = c; menor = b;
-    else
-    if (b >= a && c > a) 
-        maior = c; medio = b; menor = a;
+    if (c >= b)
+        maior = c, b;
     else 
-    if (b >= c && c >= a)
-        maior = b; medio = c; menor = a;
-    
+        maior = b, c;
 
-    if (i == 1) 
-        printf("%f %f %f\n", menor, medio, maior);
+    if (a <= b && a < c)
+        menor = a, b;
     else 
-    if (i == 2) 
-        printf("%f %f %f\n", maior, medio, menor);
+    if (b <= a && b < c)
+        menor = b, a;
+    else
+    if (c <= a && c < b)
+        menor = c , a;
     else 
-    if (i == 3) 
-        printf("%f %f %f\n", menor, maior, medio);
+    if (c <= b)
+        menor = c, b;
     else 
+        menor = b, c;
+
+    if (a != maior && a != menor)
+        meio = a;
+    else 
+    if (b != maior && b != menor)
+        
+        meio = b;
+    else
+        meio = c;
+
+    if (i == 1)
+        printf("%f %f %f\n", menor, meio, maior);
+    else if (i == 2)
+        printf("%f %f %f\n", maior, meio, menor);
+    else if (i == 3)
+        printf("%f %f %f\n", menor, maior, meio);
+    else
         printf("Valor de i inválido. Tente novamente.\n");
-    
+
     return 0;
 }
